@@ -44,7 +44,24 @@
         js = d.createElement(s); js.id = id;
         js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11';
         fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
+    }(document, 'script', 'facebook-jssdk'));
+
+	// google maps
+
+    function initMap() {
+        var uluru = {lat:46.0944874, lng: 19.6618372};
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 17,
+            center: uluru
+        });
+        var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+        });
+    }
+
+
+	</script>
 		<div id="top-bar" class="container">
 			<div class="row">
 				<div class="span4">
@@ -79,9 +96,10 @@
 						</ul>
 					</nav>
 				</div>
-			</section>							
+			</section>
 			<section class="google_map">
-				<iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=74%2F6+Nguy%E1%BB%85n+V%C4%83n+Tho%E1%BA%A1i,+S%C6%A1n+Tr%C3%A0,+%C4%90%C3%A0+N%E1%BA%B5ng,+Vi%E1%BB%87t+Nam&amp;aq=0&amp;oq=74%2F6+Nguyen+Van+Thoai+Da+Nang,+Viet+Nam&amp;sll=37.0625,-95.677068&amp;sspn=41.546728,79.013672&amp;ie=UTF8&amp;hq=&amp;hnear=74+Nguy%E1%BB%85n+V%C4%83n+Tho%E1%BA%A1i,+Ng%C5%A9+H%C3%A0nh+S%C6%A1n,+Da+Nang,+Vietnam&amp;t=m&amp;ll=16.064537,108.24151&amp;spn=0.032992,0.039396&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
+				<iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed/v1/place?q=place_id:EidNYXJrYSBPcmXFoWtvdmnEh2EgMTgsIFN1Ym90aWNhLCBTcmJpamE&key=AIzaSyCDFJQIyMxg8nCd8uno0K9WxSsmRaVo3pc" allowfullscreen></iframe>
+				<!--<div id="map" style="width:100%; height:300px; border:0;"></div>-->
 			</section>
 			<section class="header_text sub">
 			<img class="pageBanner" src="themes/images/pageBanner.png" alt="New products" >
@@ -142,22 +160,22 @@
 				<h4 class="title"><span class="text">Baneri</span></h4>
 				<div class="row">
 					<div class="span2">
-						<a href="#"><img alt="esprint" src="themes/images/clients/14.png"></a>
+						<a href="http://salate.me/"><img alt="salate" src="themes/images/clients/banners/rsz_salate.png"></a>
 					</div>
 					<div class="span2">
-						<a href="#"><img alt="replay" src="themes/images/clients/35.png"></a>
+						<a href="http://ipg.veselinromic.com/"><img alt="prodaja guma" src="themes/images/clients/banners/rsz_veskogume.png"></a>
 					</div>
 					<div class="span2">
-						<a href="#"><img alt="for all mankind" src="themes/images/clients/1.png"></a>
+						<a href="http://organska-ishrana.me/"><img alt="organska ishrana" src="themes/images/clients/banners/rsz_orgisharana.png"></a>
 					</div>
 					<div class="span2">
-						<a href="#"><img alt="wrangler" src="themes/images/clients/2.png"></a>
+						<a href="http://devlakoznejakne.byethost7.com/?i=1"><img alt="kozne jakne" src="themes/images/clients/banners/rsz_1devla.png"></a>
 					</div>
 					<div class="span2">
-						<a href="#"><img alt="timberland" src="themes/images/clients/3.png"></a>
+						<a href="http://cugni.me/"><img alt="cugni me" src="themes/images/clients/banners/rsz_cugnime.png"></a>
 					</div>
 					<div class="span2">
-						<a href="#"><img alt="Vyene Westwood" src="themes/images/clients/4.png"></a>
+						<a href="#"><img alt="placeholder, 50 eura" src="themes/images/clients/banners/rsz_placeholder.png"></a>
 					</div>
 				</div>
 			</section>
@@ -200,6 +218,7 @@
 				<span>Ovaj sajt je napravljen kao školski projekat. Ne prodajemo cipele.</span>
 			</section>
 		</div>
-		<script src="themes/js/common.js"></script>		
+		<script src="themes/js/common.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIzYEMWpqEnVJkBX6Q6aqHfxg8cBS96Bk&callback=initMap"></script>
     </body>
 </html>
